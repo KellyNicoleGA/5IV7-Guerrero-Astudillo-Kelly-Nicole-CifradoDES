@@ -1,30 +1,13 @@
-
-import java.awt.Desktop;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.awt.*;
+import java.io.*;
 import java.security.InvalidKeyException;
-import java.util.Base64;
-import javax.crypto.Cipher;
-import javax.crypto.SecretKey;
+import java.util.*;
+import javax.crypto.*;
 import javax.crypto.spec.SecretKeySpec;
-import javax.swing.JFileChooser;
-import javax.swing.JOptionPane;
-import javax.swing.filechooser.FileNameExtensionFilter;
+import javax.swing.*;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
- * @author Administrador
- */
-public class Descifrars {
-    boolean jalo = true;
+public class Descifrado {
+    boolean ok = true;
     boolean Descifrararch(SecretKey clavef, String path) throws Exception {
       try{
           
@@ -68,10 +51,10 @@ public class Descifrars {
           System.out.println("Error");
           JOptionPane.showMessageDialog(null,"Error\n Recuerda que la clave tiene que ser de 8 bytes");
            System.out.println(e);
-           jalo = false;
+           ok = false;
            
     }
-      return jalo;
+      return ok;
     
       
 }
@@ -87,20 +70,19 @@ public class Descifrars {
         }
         return originalKey;
 }
-    String ubi;
+    String url;
      public String SubiraArchivo(){
       
       JFileChooser file = new JFileChooser();
       
       file.showOpenDialog(file);
-      File abre = file.getSelectedFile();
+      File abrir = file.getSelectedFile();
       
-      if(abre!= null){
-          ubi = abre.getPath();
+      if(abrir!= null){
+          url = abrir.getPath();
       }
-      System.out.println(ubi);
-     return ubi;
+      System.out.println(url);
+     return url;
   }
                      
 }
-

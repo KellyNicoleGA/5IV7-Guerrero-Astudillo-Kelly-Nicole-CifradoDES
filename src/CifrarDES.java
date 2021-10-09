@@ -199,14 +199,16 @@ public class CifrarDES extends javax.swing.JFrame {
 
     private void generarbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generarbtnActionPerformed
          Cifrado c = new Cifrado();
+        
         try {
-             clave = c.llave();
-             claves = c.convertSecretKeyToString(clave);
+            clave = c.llave();
+            claves = c.convertSecretKeyToString(clave);
              System.out.println(clave);
              claveg.setText(claves);
         } catch (Exception ex) {
-            Logger.getLogger(Cifrar.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(CifrarDES.class.getName()).log(Level.SEVERE, null, ex);
         }
+             
     }//GEN-LAST:event_generarbtnActionPerformed
 
     boolean ingreso=false;
@@ -249,7 +251,7 @@ public class CifrarDES extends javax.swing.JFrame {
                 System.out.println("Revisar la clave");
             }
         } catch (Exception ex) {
-            Logger.getLogger(Cifrar.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(CifrarDES.class.getName()).log(Level.SEVERE, null, ex);
         }
         
     }//GEN-LAST:event_cifrarbtnActionPerformed

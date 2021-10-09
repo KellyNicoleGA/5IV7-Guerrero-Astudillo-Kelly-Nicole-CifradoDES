@@ -204,7 +204,7 @@ public class DescifrarDES extends javax.swing.JFrame {
         boolean jalo = true;
         try {
             String keys = this.claver.getText();
-            Descifrars d = new Descifrars();
+            Descifrado d = new Descifrado();
             SecretKey keyf = d.convertStringToSecretKeyto(keys);
 
             if (keyf != null) {
@@ -225,7 +225,7 @@ public class DescifrarDES extends javax.swing.JFrame {
             }
 
         } catch (Exception ex) {
-            Logger.getLogger(Descifrar.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DescifrarDES.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_descifrarbtnActionPerformed
 
@@ -238,7 +238,7 @@ public class DescifrarDES extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jMenu1MouseClicked
 
-    private void claverKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyTyped
+    private void claverKeyTyped(java.awt.event.KeyEvent evt) {                                     
         // TODO add your handling code here:
         if (this.claver.getText().length() >= 15) {
             evt.consume();
